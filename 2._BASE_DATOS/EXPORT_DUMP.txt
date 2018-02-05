@@ -1,0 +1,1 @@
+expdp system/Oracle01@xe DIRECTORY=DIRECTORIO_EXPORT schemas=SICDBA EXCLUDE=synonym,statistics

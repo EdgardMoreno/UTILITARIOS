@@ -1,0 +1,59 @@
+-LINKS IMPORTANTES
+
+* ATRIBUTOS DE LOS OBTEJOS HTML
+https://www.w3schools.com/jsref/dom_obj_table.asp
+
+* UTILIZAR MODAL EN JSF, EN DONDE SE ENVIE PARAMETRO DEL PADRE AL HIJO 
+https://www.youtube.com/watch?v=ajsnITECntI
+
+* ENTENDIENDO JAVA SERVER FACES
+https://javabeat.net/introduction-to-java-server-faces/
+
+* LITTLE EXPLANATION ABOUT FANCY BOX FUNCTIONALITY
+https://stackoverflow.com/questions/8913583/fancybox-returning-the-requested-content-cannot-be-loaded-please-try-again-lat
+
+
+
+----- CODES SNIPPETS 
+* Redireccionar a otra pagina desde ManagedBean -> JSF
+    FacesContext context = FacesContext.getCurrentInstance();
+	context.getExternalContext().redirect("/templates/main.xhtml"); 
+
+	
+* PASAR PARAMETROS A IFRAME
+	On the main page simply pass parameters as follows
+
+	function myFunction(){
+	$('#myIframe').attr('src', "myIframeRequest.html?param1=value1&param2=value2"); 
+	} 
+	In Iframe
+
+	You can use a script to get the desired parameter value from parameters passed to page.
+
+	<script>
+	function getParamValue(paramName)
+	{
+		var url = window.location.search.substring(1); //get rid of "?" in querystring
+		var qArray = url.split('&'); //get key-value pairs
+		for (var i = 0; i < qArray.length; i++) 
+		{
+			var pArr = qArray[i].split('='); //split key and value
+			if (pArr[0] == paramName) 
+				return pArr[1]; //return value
+		}
+	}
+	</script>
+	Then you can fetch the value of desired parameter like this
+
+	var param1 = getParamValue('param1');
+	
+* JS ORIENTADO A OBJETOS
+var generico = { nombre: 'Juan'
+				,edad : 15
+				,saludar : function(name){
+						console.log("hola "+ nombre)
+					}
+				};
+
+console.log(generico.nombre);
+console.log(generico.saludar("Marcos"));

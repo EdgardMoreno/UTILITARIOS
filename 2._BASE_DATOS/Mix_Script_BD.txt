@@ -1,0 +1,56 @@
+--------------------------------
+-- Datos de Sesiones:
+--------------------------------
+SELECT S.USERNAME,
+       S.STATUS,
+       S.SCHEMANAME,
+       S.OSUSER,
+       S.MACHINE,
+       S.PORT,
+       S.TERMINAL,
+       S.PROGRAM,
+       S.TYPE,
+       S.PREV_EXEC_START,
+       S.MODULE,
+       S.ROW_WAIT_OBJ#,
+       S.LOGON_TIME,
+       S.EVENT,
+       S.P3TEXT,
+       S.WAIT_CLASS,
+       S.STATE
+  FROM V$SESSION s
+ WHERE s.STATUS = ‘ACTIVE’
+
+----------------------------------------------
+--Datos de Cursores abiertos por consulta:
+----------------------------------------------
+
+select b.sid,
+       a.username,
+       count(oc.sid) Cursores,
+       a.status,
+       a.machine,
+       a.port,
+       a.program,
+       a.osuser,
+       a.module,
+       a.client_info,
+       oc.sql_text
+  from v$session a, v$sesstat b, v$statname c, v$open_cursor oc
+ where c.name in ('opened cursors current')
+   and oc.sid = a.sid
+   and b.statistic# = c.statistic#
+   and a.sid = b.sid
+   and a.username is not null
+   and b.value > 0
+ group by b.sid,
+          a.username,
+          a.status,
+          a.machine,
+          a.port,
+          a.program,
+          a.osuser,
+          a.module,
+          a.client_info,
+          oc.sql_text
+HAVING count(oc.sid) > 2

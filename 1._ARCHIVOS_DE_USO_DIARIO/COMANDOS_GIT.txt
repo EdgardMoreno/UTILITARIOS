@@ -1,0 +1,48 @@
+*****************************
+*** COMANDOS GIT
+*****************************
+
+-- Lista todos los comits realizados
+git log
+--Guarda todos los commits en un archivo txt
+git log > commit.txt
+-- Regresa el codigo hasta lo guardado en el commit especificado por el codigo hash
+git checkout e3416486b28b568c2f4b7b6fba6849527be2f5e4 
+-- Regresa el codigo hasta el ultimo commit realizado en la rama principal
+git checkout master 
+
+-- Regresa al commit que se especifica y borra todos los commits que se realizaron despues.
+-- No borra nada del codigo. 
+git reset --soft bc0d58d5353c082ee2e5de1f486cd4aa87a2cd56
+
+--Regresa al commit que se especifica y borra todos los commits que se realizaron despues.
+---Se borran todos los cambios realizados en los commits que se han sido eliminados
+git reset --hard bc0d58d5353c082ee2e5de1f486cd4aa87a2cd56
+
+*** RAMAS Y FUSIONES
+
+-- Lista todas las ramas
+git branch
+-- Se crear la rama 'Test'
+git branch Test
+-- Moverse a la rama 'Test'
+git checkout Test
+
+--Fusion en entre ramas. Ejemplo fusionar rama master y test, es decir pasamos los cambios de Test a master
+-- Para eso debemos movernos a la rama que absorvera al resto.
+git merge Test
+
+--Eliminar rama
+git branch -D Test
+
+--crear rama y moverse a esa rama
+git checkout -D Pruebas
+
+-----------------------------
+--GIT HUB
+-----------------------------
+--LISTAR TODAS LAS URL EXISTENTES
+$ git remote -v
+
+--Actualizar la url relacionada a origin
+$ git remote set-url origin git@github.com:ppreyer/first_app.git

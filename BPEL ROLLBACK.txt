@@ -1,0 +1,7 @@
+
+Documentacion como funciona las transacciones:
+http://docs.oracle.com/cd/E15586_01/integration.1111/e10224/soa_transactions.htm
+
+Ejemplo implementados:
+http://learn-oraclesoa.blogspot.pe/2013/07/retry-and-rollback-using-db-adapter-soa.html
+https://shrikworld.blogspot.pe/2011/05/configuring-transaction-in-composite.html

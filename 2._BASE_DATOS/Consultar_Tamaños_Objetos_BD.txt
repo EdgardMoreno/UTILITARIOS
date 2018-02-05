@@ -1,0 +1,39 @@
+
+------------------------------------------
+--Con esta sencilla Select podremos obtener el tamaño en Megas de los objetos de nuestra base de datos Oracle.
+------------------------------------------
+SELECT SEGMENT_NAME, SEGMENT_TYPE, SUM(BYTES)/1024/1024 AS TAMANIO_MB
+FROM DBA_SEGMENTS
+WHERE OWNER='ODS_DATA' AND SEGMENT_NAME = 'RELCONTRATOAPERTURA'
+GROUP BY SEGMENT_NAME, SEGMENT_TYPE 
+ORDER BY 2,1;
+
+-----------------------------------------
+-- Con esta query podemos ver los diferentes tipos de objetos que tenemos creados de un usuario esquema (OWNER). 
+-----------------------------------------
+SELECT DISTINCT SEGMENT_TYPE "Tipos objetos" 
+FROM DBA_SEGMENTS 
+WHERE OWNER=user_esquema
+ORDER BY 1;
+
+-----------------------------------------
+--Para obtener el tamaño en MB de los índices creados de un esquema podemos utilizar esta query
+-----------------------------------------
+SELECT SEGMENT_NAME Indice, ROUND(SUM(BYTES)/1024/1024) MB
+FROM DBA_SEGMENTS A
+WHERE SEGMENT_TYPE = 'INDEX'
+AND OWNER=user_esquema
+GROUP BY SEGMENT_NAME
+ORDER BY 1;
+
+
+------------------------------------------
+--En este ejemplo voy a seleccionar los índices de unas tablas específicas, tabla1, tabla2, etc., y para un esquema dado.
+------------------------------------------
+SELECT SEGMENT_NAME Indice, ROUND(SUM(BYTES)/1024/1024) MB
+FROM DBA_SEGMENTS A
+WHERE SEGMENT_TYPE = 'INDEX'
+AND OWNER=user_esquema
+AND SEGMENT_NAME IN (SELECT INDEX_NAME FROM DBA_INDEXES WHERE TABLE_NAME IN ('TABLA1', 'TABLA2', 'TABLA3'))
+GROUP BY SEGMENT_NAME 
+ORDER BY 1;

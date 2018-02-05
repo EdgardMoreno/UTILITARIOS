@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0066)http://www.ajpdsoft.com/modules.php?name=news&file=article&sid=131 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	    <!--- Codigo para la política de cookies-->
+     
+    <style type="text/css">
+    /* CSS para la animación y localización de los DIV de cookies */
+    @keyframes desaparecer
+    {
+    0%	{bottom: 0px;}
+    80%	{bottom: 0px;}
+    100%	{bottom: -50px;}
+    }
+    @-webkit-keyframes desaparecer /* Safari and Chrome */
+    {
+    0%	{bottom: 0px;}
+    80%	{bottom: 0px;}
+    100%	{bottom: -50px;}
+    }
+    @keyframes aparecer
+    {
+    0%	{bottom: -38px;}
+    10%	{bottom: 0px;}
+    90%	{bottom: 0px;}
+    100%	{bottom: -38px;}
+    }
+    @-webkit-keyframes aparecer /* Safari and Chrome */
+    {
+    0%	{bottom: -38px;}
+    10%	{bottom: 0px;}
+    90%	{bottom: 0px;}
+    100%	{bottom: -38px;}
+    }
+    #cookiesms1:target {
+    display: none;
+    }
+    .cookiesms{	
+    width:100%;
+    height:43px;
+    margin:0 auto;
+    padding-left:1%;
+    padding-top:5px;
+    font-size: 0.6em;
+    clear:both;
+    font-weight: strong;
+    color: #333;
+    bottom:0px;
+    position:fixed;
+    left: 0px;
+    background-color: #FFF;
+    opacity:0.9;
+    filter:alpha(opacity=70); /* For IE8 and earlier */
+    transition: bottom 1s;
+    -webkit-transition:bottom 1s; /* Safari */
+    -webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    -moz-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    z-index:999999999;
+    }
+    .cookiesms:hover{
+    bottom:0px;
+    }
+    .cookies2{
+    background-color: #FFF;
+    display:inline;
+    opacity:0.9;
+    filter:alpha(opacity=95);
+    position:absolute;
+    left:1%;
+    top:-30px;
+    font-size:15px;
+    height:30px;
+    padding-left:25px;
+    padding-right:25px;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-top-left-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    -moz-border-radius-topleft: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    -webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    -moz-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+    }
+    /* Fin del CSS para cookies */
+    </style>
+	
+	
+	
+    <!-- Aviso de cookies -->
+    <script async="" src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/analytics.js"></script><script type="text/javascript">
+    function controlcookies() {
+    // si variable no existe se crea (al clicar en Aceptar)
+    localStorage.controlcookie = (localStorage.controlcookie || 0);
+     
+    localStorage.controlcookie++; // incrementamos cuenta de la cookie
+    cookie1.style.display='none'; // Esconde la política de cookies
+    }
+    </script>	
+	
+    <link rel="shortcut icon" href="http://www.ajpdsoft.com/ajpdsoft.ico"><title> Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft</title>
+
+<meta http-equiv="EXPIRES" content="0">
+<meta name="RESOURCE-TYPE" content="DOCUMENT">
+<meta name="DISTRIBUTION" content="GLOBAL">
+<meta name="AUTHOR" content="Proyecto AjpdSoft">
+<meta name="COPYRIGHT" content="Copyright (c) 2016 by Proyecto AjpdSoft">
+<meta name="KEYWORDS" content="visual basic, android, eclipse, java, postgresql, sqlite, delphi, software, source code, programacion, código fuente, nuevas tecnologías, windows, linux, oracle, mysql, sql server">
+<meta name="VIEWPORT" content="width=device-width; initial-scale=1.0;">
+<meta name="DESCRIPTION" content="Algunas consultas SQL muy útiles para el administrador de Oracle (DBA)  Proyecto AjpdSoft">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="5 DAYS">
+<meta name="RATING" content="GENERAL">
+<meta name="GENERATOR" content="Proyecto AjpdSoft">
+<link rel="StyleSheet" href="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/style.css" type="text/css">
+
+
+ <script languaje="JavaScript"> 
+ var bookmarkurl="http://www.ajpdsoft.com" 
+ var bookmarktitle="Proyecto AjpdSoft" 
+ function addbookmark(){ 
+ if (document.all) 
+ window.external.AddFavorite(bookmarkurl,bookmarktitle) 
+ } 
+ </script> 
+    
+    <meta name="google-site-verification" content="p_QNwoaJey73fQjUvfXTycucR4Su1OZ6vCFcilr750Q">
+  
+
+
+
+</head>
+
+<body>	
+	<!--Código política de cookies -->    
+    <div class="cookiesms" id="cookie1" style="bottom: 0px;">
+    Utilizamos cookies propias y de terceros. Al navegar entendemos que aceptas el uso de cookies. <a href="http://www.ajpdsoft.com/modules.php?name=Politica_Cookies">+Info</a>. 	    
+    <button onclick="controlcookies()">OK</button>
+    <div class="cookies2" onmouseover="document.getElementById(&#39;cookie1&#39;).style.bottom = &#39;0px&#39;;">Política de cookies</div>
+    </div>
+    <script type="text/javascript">
+    if (localStorage.controlcookie>0){
+      document.getElementById('cookie1').style.bottom = '-50px';
+	  cookie1.style.display='none'; // Esconde la política de cookies
+    }
+    </script>
+    <!-- Fin del código de cookies --->
+	
+	
+	
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-587417-1', 'auto');
+  ga('send', 'pageview');
+
+</script><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td width="25%"><a href="http://www.ajpdsoft.com/"><img class="imgno" src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/logo.png" border="0" alt="Proyecto AjpdSoft"></a></td>
+          <td width="75%">
+		  
+<script async="" src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/adsbygoogle.js"></script>
+<!-- AjpdSoft_Adaptable_Superior -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9017794352345256" data-ad-slot="8205174301" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+<tbody><tr valign="top">
+  <td valign="top" width="1"><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <td><br></td>
+ </tr>
+</tbody></table>
+ 
+<table table-layout="fixed" width="100&quot;" border="0" cellpadding="1" cellspacing="0" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tbody><tr>
+                <td><font class="content"><strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/">Inicio</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Search">Buscar</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Contactar">Contactar</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Politica_Cookies">Cookies</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Downloads">Descargas</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Foros">Foros</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Historia">Historia</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Quienes_Somos">Nosotros</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Recommend_Us">Proponer</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Topics">Temas</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Top">Top 10</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Content">Trucos</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Stories_Archive">Tutoriales</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Your_Account">Usuario</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Encyclopedia">Wiki</a><br>
+</font></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <td><br></td>
+ </tr>
+</tbody></table>
+ 
+<table table-layout="fixed" width="100&quot;" border="0" cellpadding="1" cellspacing="0" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tbody><tr>
+                <td><font class="content"><form action="http://www.ajpdsoft.com/modules.php?name=Your_Account" method="post"><center><font class="content">Nick<br><input type="text" name="username" size="6" maxlength="25"><br><br>Contraseña<br><input type="password" name="user_password" size="6" maxlength="20"><br><input type="hidden" name="random_num" value="829046"><input type="hidden" name="gfx_check" value="084753"><input type="hidden" name="op" value="login"><br><input type="submit" value="Iniciar"></font></center></form><center><font class="content"><a href="http://www.ajpdsoft.com/modules.php?name=Your_Account&amp;op=new_user">Nuevo usuario</a></font></center></font></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <td><br></td>
+ </tr>
+</tbody></table>
+ 
+<table table-layout="fixed" width="100&quot;" border="0" cellpadding="1" cellspacing="0" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tbody><tr>
+                <td><font class="content"><script async="" src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/adsbygoogle.js"></script>
+<!-- AjpdSoft_Adaptable_Vertical -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9017794352345256" data-ad-slot="8722244701" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></font></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <td><br></td>
+ </tr>
+</tbody></table>
+ 
+<table table-layout="fixed" width="100&quot;" border="0" cellpadding="1" cellspacing="0" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tbody><tr>
+                <td><font class="content"><a href="http://www.ajpdsoft.com/?traducir=es-en">English</a></font></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table></td><td valign="top" width="100%">
+<script async="" src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9017794352345256",
+    enable_page_level_ads: true
+  });
+</script>
+
+<table width="100%" border="0"><tbody><tr><td valign="top" width="100%">
+<!-- Anuncio -->
+<div style="width:99% !important; margin-left:1%;margin-right:1%;">
+	<br>
+	<!-- Título del artículo -->
+	<div class="storytitle" style="background-color: #cccccc;padding:5px;">
+		<span><strong><a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=categories&amp;op=newindex&amp;catid=16"><font class="storycat">Oracle</font></a>: Algunas consultas SQL muy útiles para el administrador de Oracle (DBA)</strong></span>
+	</div>
+	
+	<!-- Cuerpo del artículo -->
+	<div style="background-color: #eaf4f9;border: 1px solid #cccccc;padding:5px;">
+			<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;new_topic=20">
+			<img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/basesdatos.gif" border="0" alt="Bases de Datos" title="Bases de Datos" align="right" hspace="10" vspace="10"></a>
+			<span style="padding-left:5px; padding-right:5px;"><font class="storycontent"><span align="left"><br><br><script async="" src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/adsbygoogle.js"></script>
+      <!-- AjpdSoft_Adaptable_Articulos_Arriba -->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9017794352345256" data-ad-slot="3473923507" data-ad-format="auto"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>  <br></span> <p align="justify">Os mostramos algunas consultas <a href="http://www.ajpdsoft.com/modules.php?name=Encyclopedia&amp;op=content&amp;tid=763" title="Enciclopedia AjpdSoft - Definición SQL" target="_blank">SQL</a> muy útiles para el administrador de <a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=16" title="Otros artículos sobre Oracle Database" target="_blank">Oracle Database</a>: estado de la base de datos Oracle, parámetros generales, ficheros de control, conexiones actuales a Oracle, nombre del ejecutable que se utiliza, nombre del usuario, diccionario de datos (vistas y tablas), IP del servidor, tamaño de la base de datos, versión de Oracle, ...</p><br><br><ul>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=article&amp;sid=131#definicionsql" title="Definición SQL">Definición SQL</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=article&amp;sid=131#consultassql" title="Consultas SQL útiles para obtener información sobre Oracle Database">Consultas SQL útiles para obtener información sobre Oracle Database</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=article&amp;sid=131#articulosrelacionados" title="Artículos relacionados">Artículos relacionados</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=article&amp;sid=131#creditos" title="Créditos">Créditos</a>.</li>
+</ul>
+<h2></h2>
+<h2><a name="definicionsql"></a>Definición SQL</h2>
+<p align="justify">SQL (Lenguaje de consulta estructurado) es un lenguaje declarativo de acceso a bases de datos relacionales que permite especificar diversos tipos de operaciones en éstas. Una de sus características es el manejo del álgebra y el cálculo relacional permitiendo efectuar consultas con el fin de recuperar, de una forma relativamente sencilla, información de interés de una base de datos, así como también hacer cambios sobre ella. Es un lenguaje de cuarta generación (4GL).</p>
+<h2><a name="consultassql"></a>Consultas SQL útiles para obtener información sobre Oracle Database</h2>
+<ul>
+  <li>Vista que muestra el estado de la base de datos:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from v$instance</em></pre>
+</blockquote>
+<ul>
+  <li>  Consulta que muestra si la base de datos está abierta:</li>
+</ul>
+<blockquote>
+  <pre><em>select status from v$instance</em></pre>
+</blockquote>
+<ul>
+  <li>  Vista que muestra los parámetros generales de Oracle:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from v$system_parameter
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Versión de Oracle:</li>
+</ul>
+<blockquote>
+  <pre><em>select value <br>from v$system_parameter <br>where name = 'compatible'
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Ubicación y nombre del fichero spfile:</li>
+</ul>
+<blockquote>
+  <pre><em>select value <br>from v$system_parameter <br>where name = 'spfile'
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Ubicación y número de ficheros de control:</li>
+</ul>
+<blockquote>
+  <pre><em>select value <br>from v$system_parameter <br>where name = 'control_files'
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Nombre de la base de datos</li>
+</ul>
+<blockquote>
+  <pre><em>select value <br>from v$system_parameter <br>where name = 'db_name'
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Vista que muestra las conexiones actuales a Oracle:</li>
+</ul>
+<blockquote>
+  <pre><em>select osuser, username, machine, program 
+  from v$session 
+  order by osuser
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Vista que muestra el número de conexiones actuales a Oracle agrupado por aplicación que realiza la conexión</li>
+</ul>
+<blockquote>
+  <pre><em>select program Aplicacion, count(program) Numero_Sesiones
+from v$session
+group by program 
+order by Numero_Sesiones desc</em>
+</pre>
+</blockquote>
+
+<ul>
+  <li>Vista que muestra los usuarios de Oracle conectados y el número de sesiones por usuario</li>
+</ul>
+<blockquote>
+  <pre><em>select username Usuario_Oracle, count(username) Numero_Sesiones
+from v$session
+group by username
+order by Numero_Sesiones desc</em>
+</pre>
+</blockquote>  
+
+<ul>
+  <li>Propietarios de objetos y número de objetos por propietario</li>
+</ul>
+<blockquote>
+  <pre><em>select owner, count(owner) Numero 
+  from dba_objects 
+  group by owner 
+  order by Numero desc</em>
+</pre>
+</blockquote>  
+
+<ul>
+  <li>Diccionario de datos (incluye todas las vistas y tablas de la Base de Datos):</li>
+</ul>
+<blockquote>
+  <pre><em>select * from dictionary</em>
+<br>
+
+<em>select table_name from dictionary</em>
+  </pre>
+</blockquote>
+
+<ul>
+  <li>Muestra los datos de una tabla especificada (en este caso todas las tablas que lleven la cadena "EMPLO"):</li>
+</ul>
+<blockquote>
+  <pre><em>select * <br>from ALL_ALL_TABLES <br>where upper(table_name) like '%EMPLO%'
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Muestra los <a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=178" title="Concepto y ejemplo de creación de disparadores (triggers) en Oracle" target="_blank">disparadores (triggers)</a> de la base de datos Oracle Database:  </li>
+</ul>
+<blockquote><em>
+  <pre>select *<br>from ALL_TRIGGERS </pre>
+</em><p></p>
+</blockquote>
+<ul>
+  <li>Tablas propiedad del usuario actual:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from user_tables
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Todos los objetos propiedad del usuario conectado a Oracle:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from user_catalog
+</em></pre>
+</blockquote>
+<ul>
+  <li>Consulta SQL para el DBA de Oracle que muestra los tablespaces, el espacio utilizado, el espacio libre y los ficheros de datos de los mismos:</li>
+</ul>
+<blockquote>
+  <pre><em>Select t.tablespace_name  "Tablespace",  t.status "Estado",  
+    ROUND(MAX(d.bytes)/1024/1024,2) "MB Tamaño",
+    ROUND((MAX(d.bytes)/1024/1024) - 
+    (SUM(decode(f.bytes, NULL,0, f.bytes))/1024/1024),2) "MB Usados",   
+    ROUND(SUM(decode(f.bytes, NULL,0, f.bytes))/1024/1024,2) "MB Libres", 
+    t.pct_increase "% incremento", 
+    SUBSTR(d.file_name,1,80) "Fichero de datos"  
+FROM DBA_FREE_SPACE f, DBA_DATA_FILES d,  DBA_TABLESPACES t  
+WHERE t.tablespace_name = d.tablespace_name  AND 
+    f.tablespace_name(+) = d.tablespace_name    
+    AND f.file_id(+) = d.file_id GROUP BY t.tablespace_name,   
+    d.file_name,   t.pct_increase, t.status ORDER BY 1,3 DESC</em>
+</pre>
+</blockquote>
+<ul>
+  <li>Productos Oracle instalados y la versión:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from product_component_version 
+</em></pre>
+</blockquote>
+<ul>
+  <li>Roles y privilegios por roles:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from role_sys_privs
+</em></pre>
+</blockquote>
+<ul>
+  <li>Reglas de integridad y columna a la que afectan:</li>
+</ul>
+<blockquote>
+  <pre><em>select constraint_name, column_name <br>from sys.all_cons_columns
+</em></pre>
+</blockquote>
+<ul>
+  <li>Tablas de las que es propietario un usuario, en este caso "HR":</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT table_owner, table_name <br>from sys.all_synonyms <br>where table_owner like 'HR'
+</em></pre>
+</blockquote>
+<ul>
+  <li>Otra forma más efectiva (tablas de las que es propietario un usuario):</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT DISTINCT TABLE_NAME 
+FROM ALL_ALL_TABLES 
+WHERE OWNER LIKE 'HR' </em>
+</pre>
+</blockquote>
+<ul>
+  <li>Parámetros de Oracle, valor actual y su descripción:</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT v.name, v.value value, decode(ISSYS_MODIFIABLE, 'DEFERRED', 
+     'TRUE', 'FALSE') ISSYS_MODIFIABLE,  decode(v.isDefault, 'TRUE', 'YES',
+     'FALSE', 'NO') "DEFAULT",  DECODE(ISSES_MODIFIABLE,  'IMMEDIATE',  
+     'YES','FALSE',  'NO',  'DEFERRED', 'NO', 'YES') SES_MODIFIABLE,   
+     DECODE(ISSYS_MODIFIABLE, 'IMMEDIATE', 'YES',  'FALSE', 'NO',  
+     'DEFERRED', 'YES','YES') SYS_MODIFIABLE ,  v.description  
+FROM V$PARAMETER v 
+WHERE name not like 'nls%'   ORDER BY 1</em>
+  </pre>
+</blockquote>
+<ul>
+  <li>Usuarios de Oracle y todos sus datos (fecha de creación, estado, id, nombre, tablespace temporal,...):</li>
+</ul>
+<blockquote>
+  <pre><em>Select  * FROM dba_users
+</em></pre>
+</blockquote>
+<ul>
+  <li>Tablespaces y propietarios de los mismos:</li>
+</ul>
+<blockquote>
+  <pre><em>select owner, decode(partition_name, null, segment_name, 
+   segment_name || ':' || partition_name) name, 
+   segment_type, tablespace_name,bytes,initial_extent, 
+   next_extent, PCT_INCREASE, extents, max_extents 
+from dba_segments 
+Where 1=1 And extents &gt; 1 order by 9 desc, 3 
+</em></pre>
+</blockquote>
+<ul>
+  <li>Últimas consultas SQL ejecutadas en Oracle y usuario que las ejecutó:</li>
+</ul>
+<blockquote>
+  <pre><em>select distinct vs.sql_text, vs.sharable_mem, 
+  vs.persistent_mem, vs.runtime_mem,  vs.sorts,
+  vs.executions, vs.parse_calls, vs.module,  
+  vs.buffer_gets, vs.disk_reads, vs.version_count, 
+  vs.users_opening, vs.loads,  
+  to_char(to_date(vs.first_load_time,
+  'YYYY-MM-DD/HH24:MI:SS'),'MM/DD  HH24:MI:SS') first_load_time,  
+  rawtohex(vs.address) address, vs.hash_value hash_value , 
+  rows_processed  , vs.command_type, vs.parsing_user_id  , 
+  OPTIMIZER_MODE  , au.USERNAME parseuser  
+from v$sqlarea vs , all_users au   
+where (parsing_user_id != 0)  AND 
+(au.user_id(+)=vs.parsing_user_id)  
+and (executions &gt;= 1) order by   buffer_gets/executions desc </em>
+</pre>
+</blockquote>
+<ul>
+  <li>Todos los ficheros de datos y su ubicación:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from V$DATAFILE</em>
+</pre>
+</blockquote>
+<ul>
+  <li>Ficheros temporales:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from V$TEMPFILE
+</em></pre>
+</blockquote>
+<ul>
+  <li>Tablespaces:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from V$TABLESPACE
+</em></pre>
+</blockquote>
+<ul>
+  <li>Otras vistas muy interesantes:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from V$BACKUP
+</em><br><em>select * from V$ARCHIVE   
+<br>select * from V$LOG   
+
+select * from V$LOGFILE    
+
+select * from V$LOGHIST          
+<br>select * from V$ARCHIVED_LOG    
+
+select * from V$DATABASE</em></pre>
+</blockquote>
+<ul>
+  <li>Memoria Share_Pool libre y usada:</li>
+</ul>
+<blockquote> 
+  <pre><em>select name,to_number(value) bytes 
+from v$parameter where name ='shared_pool_size'
+union all
+select name,bytes 
+from v$sgastat where pool = 'shared pool' and name = 'free memory'</em>
+  </pre>
+</blockquote>
+
+
+
+<ul>
+  <li>Cursores abiertos por usuario:</li>
+</ul>
+<blockquote>
+  <pre><em>select b.sid, a.username, b.value Cursores_Abiertos
+      from v$session a,
+           v$sesstat b,
+           v$statname c
+      where c.name in ('opened cursors current')
+      and   b.statistic# = c.statistic#
+      and   a.sid = b.sid 
+      and   a.username is not null
+      and   b.value &gt;0
+      order by 3</em>
+</pre>
+</blockquote>
+
+<ul>
+  <li>Aciertos de la caché (no debe superar el 1 por ciento):</li>
+</ul>
+<blockquote>
+  <pre><em>select sum(pins) Ejecuciones, sum(reloads) Fallos_cache,
+  trunc(sum(reloads)/sum(pins)*100,2) Porcentaje_aciertos 
+from v$librarycache
+where namespace in ('TABLE/PROCEDURE','SQL AREA','BODY','TRIGGER');</em>
+</pre>
+</blockquote>
+
+<ul>
+  <li>Sentencias SQL completas ejecutadas con un texto determinado en el SQL:</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT c.sid, d.piece, c.serial#, c.username, d.sql_text 
+FROM v$session c, v$sqltext d 
+WHERE  c.sql_hash_value = d.hash_value 
+  and upper(d.sql_text) like '%WHERE CAMPO LIKE%'
+ORDER BY c.sid, d.piece
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Una sentencia SQL concreta (filtrado por sid):</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT c.sid, d.piece, c.serial#, c.username, d.sql_text 
+FROM v$session c, v$sqltext d 
+WHERE  c.sql_hash_value = d.hash_value and sid = 105
+ORDER BY c.sid, d.piece</em>
+</pre>
+</blockquote>
+
+<ul>
+  <li>Tamaño ocupado por la base de datos</li>
+</ul>
+<blockquote>
+  <pre><em>select sum(BYTES)/1024/1024 MB <br>from DBA_EXTENTS  
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Tamaño de los ficheros de datos de la base de datos:</li>
+</ul>
+<blockquote>
+  <pre><em>select sum(bytes)/1024/1024 MB <br>from dba_data_files
+</em></pre>
+</blockquote>
+
+<ul>
+  <li>Tamaño ocupado por una tabla concreta sin incluir los índices de la misma</li>
+</ul>
+<blockquote>
+  <pre><em>select sum(bytes)/1024/1024 MB <br>from user_segments
+where segment_type='TABLE' and segment_name='NOMBRETABLA'</em>
+</pre>
+</blockquote>
+<ul>
+  <li>Tamaño ocupado por una tabla concreta incluyendo los índices de la misma</li>
+</ul>
+<blockquote>
+  <pre><em>select sum(bytes)/1024/1024 Table_Allocation_MB <br>from user_segments
+where segment_type in ('TABLE','INDEX') and
+  (segment_name='NOMBRETABLA' or segment_name in
+    (select index_name <br>     from user_indexes <br>     where table_name='NOMBRETABLA'))</em>
+</pre>
+</blockquote>
+<ul>
+  <li>Tamaño ocupado por una columna de una tabla:</li>
+</ul>
+<blockquote>
+  <pre><em>select sum(vsize('NOMBRECOLUMNA'))/1024/1024 MB <br>from NOMBRETABLA
+</em></pre>
+</blockquote>
+<ul>
+  <li>Espacio ocupado por usuario:</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT owner, SUM(BYTES)/1024/1024 <br>FROM DBA_EXTENTS MB
+GROUP BY owner</em>
+</pre>
+</blockquote>
+<ul>
+  <li>Espacio ocupado por los diferentes segmentos (tablas, índices, undo, rollback, cluster, ...):</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT SEGMENT_TYPE, SUM(BYTES)/1024/1024 <br>FROM DBA_EXTENTS MB
+GROUP BY SEGMENT_TYPE</em>
+</pre>
+</blockquote>
+<ul>
+  <li>Espacio ocupado por todos los objetos de la base de datos, muestra los objetos que más ocupan primero:</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT SEGMENT_NAME, SUM(BYTES)/1024/1024 <br>FROM DBA_EXTENTS MB
+GROUP BY SEGMENT_NAME<br>ORDER BY 2 DESC
+</em></pre>
+</blockquote>
+<ul>
+  <li>Obtener todas las funciones de Oracle: NVL, ABS, LTRIM, ...:</li>
+</ul>
+<blockquote>
+  <pre><em>SELECT distinct object_name 
+FROM all_arguments 
+WHERE package_name = 'STANDARD'
+order by object_name
+</em></pre>
+</blockquote>
+<ul>
+  <li>Obtener los roles existentes en Oracle Database:</li>
+</ul>
+<blockquote>
+  <pre><em>select * from DBA_ROLES
+</em></pre>
+</blockquote>
+<ul>
+  <li>Obtener los privilegios otorgados a un rol de Oracle:</li>
+</ul>
+<blockquote>
+  <pre><em>select privilege 
+from dba_sys_privs 
+where grantee = 'NOMBRE_ROL'</em></pre>
+</blockquote>
+<ul>
+  <li>Obtener la IP del servidor de la base de datos Oracle Database:</li>
+</ul>
+<blockquote>
+  <pre><em>select utl_inaddr.get_host_address IP
+from dual </em></pre>
+</blockquote>
+<ul>
+  <li>
+    <p></p>
+  Mostrar datos de auditoría de la base de datos Oracle (inicio y desconexión de sesiones):</li>
+</ul>
+<blockquote>
+  <pre><em>select username, action_name, priv_used, returncode<br>from dba_audit_trail</em></pre>
+</blockquote>
+<ul>
+  <li>
+    <p></p>
+    Comprobar si la auditoría de la base de datos Oracle está activada:</li>
+</ul>
+<blockquote>
+  <pre><em>select name, value<br>from v$parameter
+where name like 'audit_trail'</em></pre>
+  <p> </p>
+</blockquote>
+<p></p>
+<h2><a name="articulosrelacionados"></a>Artículos relacionados</h2>
+<ul>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=364" title="Instalar Oracle Database 11g Standard Edition en Windows XP Profesional" target="_blank">Instalar Oracle Database 11g Standard Edition en Windows XP Profesional</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=272" title="Instalar Oracle Database 10g en Windows XP" target="_blank">Instalar Oracle Database 10g en Windows XP</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=256" title=" Instalar Oracle Database 10g Express Edition XE en Linux Ubuntu 6.06" target="_blank"> Instalar Oracle Database 10g Express Edition XE en Linux Ubuntu 6.06</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=article&amp;sid=122" title="Manual para instalar Oracle 9i en Windows con capturas de pantalla" target="_blank">Manual para instalar Oracle 9i en Windows con capturas de pantalla</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=135" title="Cómo instalar Oracle Client en Windows" target="_blank">Instalación de Oracle Client en Windows XP</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=346" title="Instalar y realizar aplicación web con Oracle Application Express" target="_blank">Instalar y realizar aplicación web con Oracle Application Express</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=346" title="Instalar y realizar aplicación web con Oracle Application Express" target="_blank">Instalar Oracle Application Express en Windows XP</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=163" title="AjpdSoft Administración Bases de Datos" target="_blank">AjpdSoft Administración Bases de Datos</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=368" title="Instalar Oracle Dabase XE (Express Edition) en GNU Linux Fedora 10" target="_blank">Instalar Oracle Dabase XE (Express Edition) en GNU Linux Fedora 10</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=241" title="Instalación y configuración de Oracle Management Server" target="_blank">Instalación y configuración de Oracle Management Server</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=178" title="Concepto y ejemplo de creación de disparadores (triggers) en Oracle" target="_blank">Concepto y ejemplo de creación de disparadores (triggers) en Oracle</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=268" title="Tipos de datos / Datatypes en Oracle" target="_blank">Tipos de datos / Datatypes en Oracle</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=132" title="Cómo acceder a Oracle con Delphi sin utilizar código fuente" target="_blank">Cómo acceder a Oracle con Delphi sin utilizar código fuente</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=235" title="Cómo activar/desactivar el modo de archive log de una base de datos Oracle" target="_blank">Cómo activar/desactivar el modo de archive log de una base de datos Oracle</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=16" title="Otros artículos sobre Oracle Database" target="_blank">Oracle Database</a>. </li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=157" title="Manual SQL (con ejemplos de sentencias SQL Oracle)" target="_blank">Manual SQL (con ejemplos de sentencias SQL Oracle)</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=163" title="AjpdSoft Administración Bases de Datos" target="_blank">AjpdSoft Administración Bases de Datos</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=Downloads&amp;d_op=viewdownloaddetails&amp;lid=227" title="AjpdSoft Monitor Espacio Oracle Código Fuente Delphi" target="_blank">AjpdSoft Monitor Espacio Oracle Código Fuente Delphi</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=Encyclopedia&amp;op=content&amp;tid=760" title="Enciclopedia Informática - Definición de ODBC" target="_blank">Enciclopedia AjpdSoft - Definición ODBC</a>.</li>
+  <li><a href="http://www.ajpdsoft.com/modules.php?name=Encyclopedia&amp;op=content&amp;tid=763" title="Enciclopedia AjpdSoft - Definición SQL" target="_blank">Enciclopedia AjpdSoft - Definición SQL</a>.</li>
+</ul>
+<h2> </h2>
+<h2><a name="creditos"></a>Créditos</h2>
+<p>Artículo realizado íntegramente por <a href="http://www.ajpdsoft.com/modules.php?name=Foros&amp;file=profile&amp;mode=viewprofile&amp;u=63" title="Perfil del usuario Alonsojpd - Proyecto AjpdSoft" target="_blank">Alonsojpd</a>, miembro fundador del proyecto <a href="http://www.ajpdsoft.com/modules.php?name=Quienes_Somos" title="Proyecto software libre, open source, manuales, artículos AjpdSoft" target="_blank">AjpdSoft</a>.</p><br><br><b>Nota:</b> <i>Revisado por AjpdSoft el 25-08-2009.<br>
+Revisado por AjpdSoft el 16-08-2009.<br>
+Revisado por AjpdSoft el 03-01-2009.<br>
+Revisado por AjpdSoft el 17-11-2006.</i>
+ <br><b>Anuncios</b> <br><script async="" src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/adsbygoogle.js"></script>
+      <!-- AjpdSoft_Adaptable_Articulos_Abajo -->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9017794352345256" data-ad-slot="5391308707" data-ad-format="auto"></ins>
+      <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+      </script> <br><br></font></span>
+	</div>
+	
+	<!-- Pie del artículo -->
+	<div style="height:22px; text-align:center;padding:5px;">
+		<font class="content">Enviado el Thursday, 19 May a las 13:31:04 por <a href="http://www.ajpdsoft.com/">ajpdsoft</a></font>
+	</div>
+</div>
+</td><td>&nbsp;</td><td valign="top">
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <td><br></td>
+ </tr>
+</tbody></table>
+ 
+<table table-layout="fixed" width="100&quot;" border="0" cellpadding="1" cellspacing="0" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tbody><tr>
+                <td><font class="content"><font class="content"><strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=346" target="new">Crear aplicación APEX</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=256" target="new">Oracle XE en Linux Ubuntu</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=343" target="new">Cargar fichero en MySQL</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=337" target="new">MySQL Server 6.0 Windows</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=314" target="new">Instalar MSDE</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=272" target="new">Oracle 10g en Windows</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=268" target="new">Tipos de datos Oracle</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=241" target="new">Oracle Management Server</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=237" target="new">Recuperar con RMAN</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=235" target="new">Modo Archive Log</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=181" target="new">Secuencias en Oracle</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=178" target="new">Disparadores (triggers) Oracle</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=159" target="new">MySQL Server en Ubuntu</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Search&amp;topic=20">Más Acerca de Bases de Datos</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=Search&amp;author=ajpdsoft">Noticias/artículos de ajpdsoft</a>
+</font><br><hr noshade="" width="95%" size="1"><center><font class="content"><b>Noticia/artículo más leída sobre Bases de Datos:</b><br>
+<a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=article&amp;sid=131">Algunas consultas SQL muy útiles para el administrador de Oracle (DBA)</a></font></center><br>
+</font></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <td><br></td>
+ </tr>
+</tbody></table>
+ 
+<table table-layout="fixed" width="100&quot;" border="0" cellpadding="1" cellspacing="0" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tbody><tr>
+                <td><font class="content"><center>Puntuación Promedio: <b>2.44</b><br>votos: <b>84</b><br><br><img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/stars-2.gif" border="1"></center><br><form action="http://www.ajpdsoft.com/modules.php?name=news" method="post"><center>Por favor tómate un segundo y vota por este artículo:</center><br><input type="hidden" name="sid" value="131"><input type="hidden" name="op" value="rate_article"><input type="radio" name="score" value="5"> <img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/stars-5.gif" border="0" alt="Excelente" title="Excelente"><br><input type="radio" name="score" value="4"> <img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/stars-4.gif" border="0" alt="Muy Bueno" title="Muy Bueno"><br><input type="radio" name="score" value="3"> <img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/stars-3.gif" border="0" alt="Bueno" title="Bueno"><br><input type="radio" name="score" value="2"> <img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/stars-2.gif" border="0" alt="Regular" title="Regular"><br><input type="radio" name="score" value="1"> <img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/stars-1.gif" border="0" alt="Malo" title="Malo"><br><br><center><input type="submit" value="¡Grabar mi Voto!"></center></form><br></font></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <td><br></td>
+ </tr>
+</tbody></table>
+ 
+<table table-layout="fixed" width="100&quot;" border="0" cellpadding="1" cellspacing="0" bgcolor="757575">
+  <tbody><tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="eaf4f9">
+        <tbody><tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tbody><tr>
+                <td><font class="content"><br>&nbsp;<img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/print.gif" border="0" alt="Versión Imprimible" title="Versión Imprimible" width="16" height="11">&nbsp;&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=print&amp;sid=131">Versión Imprimible</a><br><br>&nbsp;<img src="./Algunas consultas SQL muy útiles para el administrador de Oracle (DBA) Proyecto AjpdSoft_files/friend.gif" border="0" alt="Enviar a un Amigo" title="Enviar a un Amigo" width="16" height="11">&nbsp;&nbsp;<a href="http://www.ajpdsoft.com/modules.php?name=news&amp;file=friend&amp;op=FriendSend&amp;sid=131">Enviar a un Amigo</a><br><br>
+</font></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="757575">
+<tbody><tr>
+<td bgcolor="eaf4f9"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tbody><tr>
+<td><div align="center"><font class="small">Este sitio web <b>NO CONTIENE</b> malware, todos los programas con código fuente  <a href="http://www.ajpdsoft.com/modules.php?name=Downloads">aquí</a>. Autor: Alonso Javier Pérez Díaz <a href="https://plus.google.com/105224752118155793261?rel=author">Google+</a> <a href="https://plus.google.com/117287085489520648443" rel="publisher">Síguenos en Google+</a></font></div></td>
+</tr>
+</tbody></table></td>
+</tr>
+</tbody></table>
+
+</body></html>

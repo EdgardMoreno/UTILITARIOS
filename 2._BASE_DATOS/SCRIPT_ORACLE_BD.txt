@@ -1,0 +1,5 @@
+-¿CÓMO CREAR UN LISTENER UTILIZANDO LA UTILIDAD NETCA?
+http://misasignaturasfavoritas.blogspot.com.es/2012/09/crear-un-listener-utilizando-la.html
+
+-CREAR UNA BASE DE DATOS
+http://misasignaturasfavoritas.blogspot.pe/2012/09/crear-una-base-de-datos-utilizando-dbca.html

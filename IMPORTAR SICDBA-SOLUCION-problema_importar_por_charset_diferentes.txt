@@ -1,0 +1,76 @@
+
+Con estos 2 links se revolvio el problema para importar un DMP
+
+Error Relacionado: IMP-00038: Could not convert to environment character set's handle
+
+
+http://cgonzalezblog.blogspot.pe/2012/12/importando-un-dmp-en-oracle-11g.html
+Esta pagina hacer referencia a esta otra pagina: http://dba.stackexchange.com/questions/23443/oracle-11g-dmp-viewer
+
+======================================================
+--IMPORTAR ESQUEMA SICDBA 
+=======================================================
+
+	1) CREAMOS EL TABLE SPACE
+	
+		CREATE TABLESPACE TBS_SICDB DATAFILE 'C:\ARCHIVOS\PRE_PRODUCCION\PROYECTOS_DESARROLLO_SOFTWARE\BD\TBS_SICDB.DBF' SIZE 1024M AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED
+		LOGGING
+		ONLINE
+		PERMANENT
+		EXTENT MANAGEMENT LOCAL AUTOALLOCATE
+		BLOCKSIZE 8K
+		SEGMENT SPACE MANAGEMENT AUTO
+		FLASHBACK ON;
+		
+		
+		CREATE TABLESPACE TBS_SICDBA DATAFILE 'C:\ARCHIVOS\PRE_PRODUCCION\PROYECTOS_DESARROLLO_SOFTWARE\BD\TBS_SICDBA.DBF' SIZE 1024M AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED
+		LOGGING
+		ONLINE
+		PERMANENT
+		EXTENT MANAGEMENT LOCAL AUTOALLOCATE
+		BLOCKSIZE 8K
+		SEGMENT SPACE MANAGEMENT AUTO
+		FLASHBACK ON;
+		
+		
+		CREATE TABLESPACE TBS_SICDBA_IDX DATAFILE 'C:\ARCHIVOS\PRE_PRODUCCION\PROYECTOS_DESARROLLO_SOFTWARE\BD\TBS_SICDBA_IDX.DBF' SIZE 1024M AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED
+		LOGGING
+		ONLINE
+		PERMANENT
+		EXTENT MANAGEMENT LOCAL AUTOALLOCATE
+		BLOCKSIZE 8K
+		SEGMENT SPACE MANAGEMENT AUTO
+		FLASHBACK ON;
+
+
+	2) CREAMOS EL USUARIO SICDBA	
+	
+		create user SICDBA
+		IDENTIFIED BY VALUES 'Oracle01'
+		default tablespace TBS_SICDB;	
+		grant select on SYS.V_$SESSION to SICDBA;
+		grant select on SYS.V_$SESSTAT to SICDBA;
+		grant select on SYS.V_$SQLAREA to SICDBA;
+		grant select on SYS.V_$SQLTEXT to SICDBA;
+		grant select on SYS.V_$STATNAME to SICDBA;
+		grant create job to SICDBA;
+		grant create database link to SICDBA;
+		grant create sequence to SICDBA;
+		grant create session to SICDBA;
+		grant create synonym to SICDBA;
+		grant create procedure to SICDBA;
+		grant create sequence to SICDBA;
+		grant create table to SICDBA;
+		grant create view to SICDBA;
+		grant create trigger to SICDBA;
+		grant create materialized view to SICDBA;
+		grant unlimited tablespace to SICDBA;
+		grant debug any procedure to SICDBA;
+		grant debug connect session to SICDBA;
+	
+	3) Copiar el archivo DMP a importar en la ruta de la BD, en este caso: 
+	   C:\oraclexe\app\oracle\admin\XE\dpdump\basedatos_bk.dmp
+	
+	4) Ejecutar comando CMD y ejecutar el siguiente codigo
+	   impdp 'SYS AS SYSDBA' file=SICDBA.DMP full=yes log=implog.txt
+	

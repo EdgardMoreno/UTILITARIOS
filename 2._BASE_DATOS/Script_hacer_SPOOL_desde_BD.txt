@@ -1,0 +1,11 @@
+SPOOL_FILE:
+-Es mucho más rápido
+-Es mas eficiente para volúmenes medios y grandes.
+SPOOL_FILE:
+-Es mucho más rápido
+-Es mas eficiente para volúmenes medios y grandes.
+-Es mas fácil el desarrollo, solo es necesario un script con un Query o un procedure muy básico. 
+	Por ejemplo: sqlplus username/password@connect_identifier set serveroutput on size 1000000 
+		spool on c:\archivo_cliente.txt 
+		declare begin select ad_org_id from ad_org; end; 
+		spool off set serveroutput off end;

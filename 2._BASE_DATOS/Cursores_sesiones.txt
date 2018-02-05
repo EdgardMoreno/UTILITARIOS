@@ -1,0 +1,88 @@
+
+
+select osuser, username, machine, program 
+  from v$session 
+  order by osuser
+  
+--Vista que muestra el número de conexiones actuales a Oracle agrupado por aplicación que realiza la conexión
+select program Aplicacion, count(program) Numero_Sesiones
+from v$session
+group by program 
+order by Numero_Sesiones desc  
+
+--Vista que muestra los usuarios de Oracle conectados y el número de sesiones por usuario
+select username Usuario_Oracle, count(username) Numero_Sesiones
+from v$session
+group by username
+order by Numero_Sesiones desc
+
+
+
+select  b.sid
+       ,a.machine
+       ,a.program
+       ,a.username
+       ,a.schemaname
+       ,b.value Cursores_Abiertos
+      from v$session a,
+           v$sesstat b,
+           v$statname c
+      where c.name in('opened cursors current')
+      AND STATUS = 'ACTIVE'
+      and   b.statistic# = c.statistic#
+      and   a.sid = b.sid 
+      and   a.username is not null
+      --and a.sid = 653
+      and   b.value >0
+      order by 4
+      
+      
+   
+
+	
+/*I am adding few more understanding.
+
+Cursor is only about a statement objecct; It is neither resultSet nor the connection object. 
+But still we have to close the resultset to free some oracle memory. Still if you don't close the resultset that won't be counted for CURSORS. 
+Closing Statement object will automatically close resultset object too. 
+Cursor will be created for all the SELECT/INSERT/UPDATE/DELETE statement. 
+Each ORACLE DB instance can be identified using oracle SID; similarly ORACLE DB can identify each connection using connection SID. Both SID are different. 
+So ORACLE session is nothing but a jdbc(tcp) connection; which is nothing but one SID. 
+If we set maximum cursors as 500 then it is only for one JDBC session/connection/SID.
+So we can have many JDBC connection with its respective no of cursors (statements).
+Once the JVM is terminated all the connections/cursors will be closed, OR JDBCConnection is closed CURSORS with respect to that connection will be closed. 
+
+Loggin as sysdba.*/
+
+  In Putty (Oracle login):
+
+    [oracle@db01 ~]$ sqlplus / as sysdba
+  In SqlPlus:
+
+  UserName:  sys as sysdba
+
+ --Set session_cached_cursors value to 0 so that it wont have closed cursors.
+
+ alter session set session_cached_cursors=0
+ select * from V$PARAMETER where name='session_cached_cursors'
+ Select existing OPEN_CURSORS valuse set per connection in DB
+
+ /*SELECT max(a.value) as highest_open_cur, p.value as max_open_cur FROM v$sesstat a, v$statname b, v$parameter p WHERE a.statistic# = b.statistic# AND b.name = 'opened cursors current' AND p.name= 'open_cursors'  GROUP BY p.value;
+ Below is the query to find the SID/connections list with open cursor values.*/
+
+ SELECT a.value, s.username, s.sid, s.serial#
+ FROM v$sesstat a, v$statname b, v$session s
+ WHERE a.statistic# = b.statistic#  AND s.sid=a.sid 
+ AND b.name = 'opened cursors current' AND username = 'SCHEMA_NAME_IN_CAPS'
+ 
+ /*Use the below query to identify the sql's in the open cursors*/
+
+ SELECT  oc.sql_text
+        ,s.sid 
+        ,S.machine
+        ,S.program
+        ,S.STATUS
+        ,S.schemaname
+ FROM    v$open_cursor oc
+        ,v$session s
+ WHERE OC.sid = S.sid AND OC.USER_NAME ='SICDBA'
