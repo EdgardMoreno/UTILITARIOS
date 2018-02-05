@@ -46,3 +46,20 @@ $ git remote -v
 
 --Actualizar la url relacionada a origin
 $ git remote set-url origin git@github.com:ppreyer/first_app.git
+
+--Lista todos los branch que se tiene en el repositorio y que estan ocultos, esto pasa cuando se clona el repositorio desde GitHub.
+$ git branch -a
+
+-- Ahora, si se quiere trabajar en ese branck, es necesario crear localmente el branck y hacer seguimiento, ejecutar lo siguiente:
+$ git checkout Pruebas
+
+	El resultado será algo como:
+
+	Branch Pruebas set up to track remote branch Pruebas from origin.
+	Switched to a new branch 'Pruebas'
+	
+-- Muestra interfaz grafica de los commits, cambios, branch, etc.
+$ gitk --all &
+	
+	
+	
