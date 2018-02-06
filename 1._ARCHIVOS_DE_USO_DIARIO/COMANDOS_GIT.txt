@@ -38,6 +38,9 @@ git branch -D Test
 --crear rama y moverse a esa rama
 git checkout -D Pruebas
 
+--Comando que permite deshacer el commit en caso se nos haya comitear algun archivo o el comentario ingresado en el commit lo queramos cambiar
+$ git commit --amend
+
 -----------------------------
 --GIT HUB
 -----------------------------
@@ -63,3 +66,5 @@ $ gitk --all &
 	
 	
 	
+	
+	<f:ajax execute="DocuIden" render="razonSocial" event="click" listener="#{autocompleteController.seleccionarFila()}"/>
